@@ -33,7 +33,7 @@ public class IntArray {
     public Integer getElement(int index) {
         if (index < 0 || index >= array.length) {
             System.out.println("Индекс вне диапазона массива");
-            return 0;
+            return null;
         }
         return this.array[index];
     }
