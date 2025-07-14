@@ -20,7 +20,7 @@ public class IntStack extends IntArray {
         temp[0] = element;
         System.arraycopy(array, 0, temp, 1, array.length);
         array = temp;
-        lenghtStack = temp.length;
+        lenghtStack ++;
     }
     public boolean isEmpty(){
         return array.length==0;
