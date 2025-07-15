@@ -29,7 +29,7 @@ public class IntStack extends IntArray {
         if(isEmpty()){
             throw new IllegalArgumentException("Стек пуст");
         }
-        return array[0];
+        return getElement(0);
     }
     public void deleteTop(){
         if(isEmpty()){
