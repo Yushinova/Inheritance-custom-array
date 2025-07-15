@@ -25,13 +25,15 @@ public class IntQueue extends IntArray {
         if (sizeFact >= sizeQueue) {
             throw new IllegalArgumentException("В очереди нет места");
         }
-        Integer[] temp = new Integer[array.length];
-        //Копируем первую половину
-        System.arraycopy(array, 0, temp, 0, sizeFact);
-        temp[sizeFact] = element;
-        // Копируем вторую половину
-        System.arraycopy(array, sizeFact, temp, sizeFact + 1, array.length - sizeFact - 1);
-        array = temp;
+        //так как размер очереди фиксирован, мы записываем новый элемент в следующий null элемент
+        super.setElement(sizeFact, element);
+//        Integer[] temp = new Integer[array.length];
+//        //Копируем первую половину
+//        System.arraycopy(array, 0, temp, 0, sizeFact);
+//        temp[sizeFact] = element;
+//        // Копируем вторую половину
+//        System.arraycopy(array, sizeFact, temp, sizeFact + 1, array.length - sizeFact - 1);
+//        array = temp;
         sizeFact++;
     }
 
